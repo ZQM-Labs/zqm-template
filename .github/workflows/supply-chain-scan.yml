@@ -20,25 +20,24 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install scanner
-        run: pip install requests
-      - name: Download scanner
+      - name: Run supply chain scan (vendored stdlib script)
         run: |
-          python -c "import urllib.request; urllib.request.urlretrieve('https://raw.githubusercontent.com/ZQM-Labs/zqm-supply-chain-scanner/main/snyk_replacement.py', 'snyk_replacement.py')"
-      - name: Run scan
-        run: |
-          python snyk_replacement.py             --repo ${{ github.repository }}             --output both             --pr ${{ github.event.pull_request.number || 0 }}
+          python .github/scripts/snyk_replacement.py \
+            --repo ${{ github.repository }} \
+            --output both \
+            --pr ${{ github.event.pull_request.number || 0 }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Upload SARIF
+      - name: Upload SARIF (best-effort; needs GHAS on private repos)
         uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: .zqm-security-reports/${{ github.repository }}/$(date -u +%Y%m%dT%H%M%SZ)-results.sarif
         if: always()
+        continue-on-error: true
+        with:
+          sarif_file: .zqm-security-reports/
       - name: Upload findings artifact
         uses: actions/upload-artifact@v4
         with:
           name: supply-chain-scan-${{ github.run_id }}
-          path: .zqm-security-reports/${{ github.repository }}/
+          path: .zqm-security-reports/
           retention-days: 30
         if: always()
