@@ -1,5 +1,15 @@
 # ZQM House Template
 
+<!-- ZQM-START -->
+<p align="center">
+  <strong>ZQM Labs — Z's Quests & Mischief</strong><br>
+  <a href="https://zqmlabs.com">zqmlabs.com</a> •
+  <a href="https://github.com/ZQM-Labs">GitHub</a>
+</p>
+<!-- ZQM-END -->
+
+
+
 The ZQM house template — .github boilerplate, CI, gitleaks, and community standards every new ZQM repo starts from.
 
 ## Who this is for
@@ -55,3 +65,15 @@ gh repo clone ZQM-Computing/zqm-template my-new-repo
 MIT — see LICENSE file.
 
 *Part of [ZQM Labs](https://github.com/ZQM-Labs) — games, gear & a little mischief.*
+
+
+<!-- ZQM-FOOTER-START -->
+---
+
+<p align="center">
+  <em>Play more. Plan less.</em><br>
+  <a href="https://zqmlabs.com">zqmlabs.com</a> •
+  <a href="https://github.com/ZQM-Labs">ZQM Labs</a> •
+  <a href="https://github.com/ZQM-Computing">ZQM Computing</a>
+</p>
+<!-- ZQM-FOOTER-END -->
