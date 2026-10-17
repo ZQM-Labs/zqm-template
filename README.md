@@ -16,6 +16,13 @@ for ZQM Computing and ZQM Labs.
 This template intentionally does not include a generic GitHub Pages deploy:
 production sites must define their own deployment target and workflow.
 
+It also intentionally excludes generic payment or fulfillment automation. A product
+repository must implement and review its own payment-provider webhook, verify payment
+state server-side, enforce idempotency, and deliver downloads through an authorized
+private path. Do not use issue labels or issue comments as proof of payment, and do
+not add a fulfillment workflow until its end-to-end path has been tested in the
+provider's test mode.
+
 ## Quick start
 
 ```bash
