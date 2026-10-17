@@ -11,6 +11,7 @@ for ZQM Computing and ZQM Labs.
 - A single Gitleaks secret scan.
 - Native dependency audits for declared Python, npm, and Go dependencies.
 - Community standards, issue forms, pull-request guidance, and Dependabot.
+- Brand and README conventions in [docs/BRAND-AND-README.md](docs/BRAND-AND-README.md).
 
 This template intentionally does not include a generic GitHub Pages deploy:
 production sites must define their own deployment target and workflow.
