@@ -39,7 +39,7 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check --upgrade pip
           if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
-          if [ -f pyproject.toml ]; then python -m pip install -e .; fi
+          if [ -f setup.py ] || [ -f setup.cfg ] || [ -d src ]; then python -m pip install -e .; fi
           python -m pip install pytest
       - name: Run tests when present
         shell: bash
