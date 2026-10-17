@@ -39,7 +39,19 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check --upgrade pip
           if [ -f requirements.txt ]; then python -m pip install -r requirements.txt; fi
-          if [ -f setup.py ] || [ -f setup.cfg ] || [ -d src ]; then python -m pip install -e .; fi
+          # Install the project when it declares package metadata, including
+          # modern pyproject-only projects that have no setup.py or src/ tree.
+          if [ -f pyproject.toml ] && python - <<'PY'
+          import tomllib
+          with open("pyproject.toml", "rb") as stream:
+              config = tomllib.load(stream)
+          raise SystemExit(0 if "project" in config else 1)
+          PY
+          then
+            python -m pip install -e .
+          elif [ -f setup.py ] || [ -f setup.cfg ] || [ -d src ]; then
+            python -m pip install -e .
+          fi
           python -m pip install pytest
       - name: Run tests when present
         shell: bash
