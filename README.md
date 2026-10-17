@@ -41,6 +41,8 @@ identity. Run the same check locally before opening a pull request:
 python scripts/check_docs.py
 ```
 
+The optional `.zqm-repo.yml` manifest records the canonical GitHub slug, display name, and any intentional aliases; CI checks it against the actual repository and README title. Update that manifest when creating a repository from this template.
+
 The checker uses only the Python standard library. It does not fetch external
 URLs or prove that external services are live; review deployment and external
 links separately when they are operationally important.
