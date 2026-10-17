@@ -35,12 +35,12 @@ else:
 identity_file = ROOT / ".zqm-repo.yml"
 if identity_file.is_file():
     identity_text = identity_file.read_text(encoding="utf-8")
-    repo_match = re.search(r"^repository:\\s*['\"]?([^'\"\\s]+)", identity_text, re.M)
-    display_match = re.search(r"^display_name:\\s*['\"]?(.+?)['\"]?\\s*$", identity_text, re.M)
-    alias_block = re.search(r"^aliases:\\s*\\n((?:[ \\t]+-.*\\n?)*)", identity_text, re.M)
+    repo_match = re.search(r"^repository:\s*['\"]?([^'\"\s]+)", identity_text, re.M)
+    display_match = re.search(r"^display_name:\s*['\"]?(.+?)['\"]?\s*$", identity_text, re.M)
+    alias_block = re.search(r"^aliases:\s*\n((?:[ \t]+-.*\n?)*)", identity_text, re.M)
     aliases = []
     if alias_block:
-        aliases = [line.strip()[1:].strip().strip("'\\\"") for line in alias_block.group(1).splitlines() if line.strip().startswith("-")]
+        aliases = [line.strip()[1:].strip().strip("'\"") for line in alias_block.group(1).splitlines() if line.strip().startswith("-")]
     if not repo_match:
         errors.append(".zqm-repo.yml must define repository: OWNER/REPOSITORY.")
     elif REPO and repo_match.group(1).lower() != REPO:
@@ -48,7 +48,7 @@ if identity_file.is_file():
     if not display_match:
         errors.append(".zqm-repo.yml must define display_name.")
     elif readme.is_file():
-        first_heading = re.search(r"^#\\s+(.+?)\\s*$", readme.read_text(encoding="utf-8"), re.M)
+        first_heading = re.search(r"^#\s+(.+?)\s*$", readme.read_text(encoding="utf-8"), re.M)
         allowed_names = [display_match.group(1).strip(), repo_match.group(1).split("/", 1)[1] if repo_match else ""]
         allowed_names.extend(aliases)
         if first_heading and first_heading.group(1).strip() not in allowed_names:
