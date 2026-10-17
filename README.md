@@ -12,6 +12,7 @@ for ZQM Computing and ZQM Labs.
 - Native dependency audits for declared Python, npm, and Go dependencies.
 - Community standards, issue forms, pull-request guidance, and Dependabot.
 - Brand and README conventions in [docs/BRAND-AND-README.md](docs/BRAND-AND-README.md).
+- Service, data, release and recovery gates in [docs/CONTINUITY-BASELINE.md](docs/CONTINUITY-BASELINE.md).
 
 This template intentionally does not include a generic GitHub Pages deploy:
 production sites must define their own deployment target and workflow.
