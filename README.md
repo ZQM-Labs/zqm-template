@@ -1,4 +1,13 @@
 # ZQM House Template
+<!-- ZQM-START -->
+<p align="center">
+  <strong>ZQM Labs — Z's Quests & Mischief</strong><br>
+  <a href="https://zqmlabs.com">zqmlabs.com</a> •
+  <a href="https://github.com/ZQM-Labs">GitHub</a>
+</p>
+<!-- ZQM-END -->
+
+
 
 The ZQM house template provides reusable repository governance and CI defaults
 for ZQM Computing and ZQM Labs.
@@ -35,6 +44,14 @@ gh repo create ZQM-Computing/my-new-repo --template ZQM-Labs/zqm-template --publ
 - [ZQM Computing](https://github.com/ZQM-Computing)
 - [ZQM Labs](https://github.com/ZQM-Labs)
 - [zqmlabs.com](https://zqmlabs.com)
+
+## Installation
+
+```bash
+pip install -e .
+```
+
+Requires Python 3.11+.
 
 ## License
 
