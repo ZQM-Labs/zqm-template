@@ -47,11 +47,7 @@ gh repo create ZQM-Computing/my-new-repo --template ZQM-Labs/zqm-template --publ
 
 ## Installation
 
-```bash
-pip install -e .
-```
-
-Requires Python 3.11+.
+Use this template to create a new repository (GitHub 'Use this template'); no installation.
 
 ## License
 
