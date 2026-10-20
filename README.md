@@ -55,6 +55,13 @@ provider's test mode.
 gh repo create ZQM-Computing/my-new-repo --template ZQM-Labs/zqm-template --public
 ```
 
+## Usage
+
+Create a new repository from this template (Use this template → Create a
+new repository), then replace the placeholder content with your project —
+keep the structure, community-health files, and workflows intact so the
+new repo starts at the house standard.
+
 ## Related repositories
 
 - [ZQM Computing](https://github.com/ZQM-Computing)
