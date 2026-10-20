@@ -5,6 +5,7 @@ Use this checklist when creating or maintaining a repository from the ZQM house 
 ## 1. Classify the repository
 
 Record:
+
 - Purpose and maintainers.
 - Public/private/internal classification and data owner.
 - Runtime, supported versions, dependency manager and lockfile policy.
@@ -36,6 +37,7 @@ Never put credentials, personal data, paid content, answer keys, customer/partic
 ## 4. Service continuity (only if the repository deploys a service)
 
 Document:
+
 - Production origin, hosting model and canonical source/release branch.
 - Health/readiness checks and external smoke tests.
 - Configuration and secret names/owners (never secret values).
@@ -68,6 +70,7 @@ Do not treat multiple connectors to one host as host availability. A local origi
 ## 7. Public repository release gate
 
 Before publishing:
+
 - Scan tracked files, generated site output, fixtures and artifacts for secrets/private data.
 - Verify links and examples without including proprietary customer data.
 - Confirm license and attribution.
@@ -79,6 +82,7 @@ Before publishing:
 ## 8. Minimum evidence in a pull request
 
 Every operational change should state:
+
 1. What changed and why.
 2. What was tested, with exact commands/results.
 3. What was not tested and why.
