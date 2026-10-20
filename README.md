@@ -12,6 +12,22 @@
 The ZQM house template provides reusable repository governance and CI defaults
 for ZQM Computing and ZQM Labs.
 
+## Repository role and status
+
+**Status:** Active, public. Documented verdict (2026-10-19 estate audit): **KEEP**.
+
+**What this repository is:** The shared starting point for new repositories in both ZQM accounts — governance and CI boilerplate, secret scanning, community standards, and the brand/README conventions every other repo is measured against.
+
+**What it contributes:**
+
+- The governance baseline for the estate: repos across ZQM-Labs and ZQM-Computing were created from, or aligned to, this template, and its `docs/CONTINUITY-BASELINE.md` defines the service, data, release, and recovery gates the estate follows.
+- The community-health source the ZQM-Labs org profile links to directly: the org's Contributing Guidelines, Security Policy, and Code of Conduct links resolve to files in this repository.
+- The prose/documentation CI conventions (including `scripts/check_docs.py`) reused across the estate's repositories.
+
+**Why it is not a deletion candidate:** Deleting it would break the org profile's community links, remove the `gh repo create --template ZQM-Labs/zqm-template` flow, and orphan the documented governance baseline. It is a public brand/governance surface, not scaffolding.
+
+**Placement:** ZQM-Labs (org-level template shared by both accounts).
+
 ## Included
 
 - Conditional CI for Python, Node.js, and Go projects; tests run only when
