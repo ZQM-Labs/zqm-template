@@ -70,11 +70,7 @@ new repo starts at the house standard.
 
 ## Installation
 
-```bash
-pip install -e .
-```
-
-Requires Python 3.11+.
+Use this template to create a new repository (GitHub 'Use this template'); no installation.
 
 ## License
 
