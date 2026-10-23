@@ -1,0 +1,4 @@
+# Gitleaks configuration — extends the built-in default ruleset.
+# Add repo-specific allowlist entries below as needed.
+[extend]
+useDefault = true
