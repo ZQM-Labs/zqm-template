@@ -9,8 +9,7 @@
 <!-- markdownlint-enable MD033 -->
 <!-- ZQM-END -->
 
-The ZQM house template provides reusable repository governance and CI defaults
-for ZQM Computing and ZQM Labs.
+The **ZQM repository template for GitHub governance, documentation, and CI defaults** shared by ZQM Computing and ZQM Labs. It provides reusable repository scaffolding, security and community standards, and documentation checks so new projects begin with consistent contribution and validation practices. Template presence does not guarantee that every consuming repository has adopted or enabled each workflow.
 
 ## Repository role and status
 
