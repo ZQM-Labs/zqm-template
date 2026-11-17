@@ -27,6 +27,8 @@ The **ZQM repository template for GitHub governance, documentation, and CI defau
 
 **Placement:** ZQM-Labs (org-level template shared by both accounts).
 
+**Canonical status (2026-11-16):** This repo is canonical for governance, community-health, prose/documentation, and brand/README conventions. CI and security templates canonicalize in the private `ZQM-Computing/zqm-github-templates` repository, which is the sole home of the vendored supply-chain scanner (`.github/scripts/zqm_supply_chain_scanner.py`) and its SARIF/code-security workflow. The inline dependency audits in this repo's `supply-chain-scan.yml` (direct `pip-audit`, `npm audit`, `govulncheck`) remain a separate, stricter gate for repos that want no vendored scanner.
+
 ## Included
 
 - Conditional CI for Python, Node.js, and Go projects; tests run only when
